@@ -17,6 +17,9 @@
 		6198141924B8073100443CBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6198141824B8073100443CBE /* main.m */; };
 		6198142324B8073100443CBE /* HomeWork2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6198142224B8073100443CBE /* HomeWork2UITests.m */; };
 		6198143924B8101200443CBE /* WeiboModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6198143824B8101200443CBE /* WeiboModel.m */; };
+		6198143C24B820E300443CBE /* FakeWeiboViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6198143B24B820E300443CBE /* FakeWeiboViewController.m */; };
+		6198143F24B823E300443CBE /* WeiboTimelineFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 6198143E24B823E300443CBE /* WeiboTimelineFetcher.m */; };
+		6198144224B8450F00443CBE /* StatusViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6198144124B8450F00443CBE /* StatusViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,12 @@
 		6198142424B8073100443CBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6198143724B8101200443CBE /* WeiboModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeiboModel.h; sourceTree = "<group>"; };
 		6198143824B8101200443CBE /* WeiboModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeiboModel.m; sourceTree = "<group>"; };
+		6198143A24B820E300443CBE /* FakeWeiboViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FakeWeiboViewController.h; sourceTree = "<group>"; };
+		6198143B24B820E300443CBE /* FakeWeiboViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FakeWeiboViewController.m; sourceTree = "<group>"; };
+		6198143D24B823E300443CBE /* WeiboTimelineFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeiboTimelineFetcher.h; sourceTree = "<group>"; };
+		6198143E24B823E300443CBE /* WeiboTimelineFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeiboTimelineFetcher.m; sourceTree = "<group>"; };
+		6198144024B8450F00443CBE /* StatusViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatusViewCell.h; sourceTree = "<group>"; };
+		6198144124B8450F00443CBE /* StatusViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusViewCell.m; sourceTree = "<group>"; };
 		890B9F098FE21C0EBEFB9CE4 /* Pods_HomeWork2_HomeWork2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeWork2_HomeWork2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1AA69A0BE551B6BACDDD3FC /* Pods_HomeWork2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeWork2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C99C0545A1857BB11D4F1C2F /* Pods-HomeWork2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeWork2.release.xcconfig"; path = "Target Support Files/Pods-HomeWork2/Pods-HomeWork2.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +124,12 @@
 				6198141424B8073100443CBE /* LaunchScreen.storyboard */,
 				6198141724B8073100443CBE /* Info.plist */,
 				6198141824B8073100443CBE /* main.m */,
+				6198143A24B820E300443CBE /* FakeWeiboViewController.h */,
+				6198143B24B820E300443CBE /* FakeWeiboViewController.m */,
+				6198143D24B823E300443CBE /* WeiboTimelineFetcher.h */,
+				6198143E24B823E300443CBE /* WeiboTimelineFetcher.m */,
+				6198144024B8450F00443CBE /* StatusViewCell.h */,
+				6198144124B8450F00443CBE /* StatusViewCell.m */,
 			);
 			path = HomeWork2;
 			sourceTree = "<group>";
@@ -333,8 +348,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6198143C24B820E300443CBE /* FakeWeiboViewController.m in Sources */,
 				6198140824B8073100443CBE /* AppDelegate.m in Sources */,
 				6198141924B8073100443CBE /* main.m in Sources */,
+				6198144224B8450F00443CBE /* StatusViewCell.m in Sources */,
+				6198143F24B823E300443CBE /* WeiboTimelineFetcher.m in Sources */,
 				6198143924B8101200443CBE /* WeiboModel.m in Sources */,
 				6198140B24B8073100443CBE /* SceneDelegate.m in Sources */,
 			);

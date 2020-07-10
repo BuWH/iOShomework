@@ -43,7 +43,7 @@
 
 + (NSDateFormatter *)dateFormatter {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.dateFormat = @"yyyy-MM-dd";
+    [dateFormatter setDateFormat:@"EEE MMM dd HH:mm:ss Z yyyy"];
     return dateFormatter;
 }
 
