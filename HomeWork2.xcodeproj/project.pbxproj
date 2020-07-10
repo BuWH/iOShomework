@@ -124,12 +124,9 @@
 				6198141424B8073100443CBE /* LaunchScreen.storyboard */,
 				6198141724B8073100443CBE /* Info.plist */,
 				6198141824B8073100443CBE /* main.m */,
-				6198143A24B820E300443CBE /* FakeWeiboViewController.h */,
-				6198143B24B820E300443CBE /* FakeWeiboViewController.m */,
-				6198143D24B823E300443CBE /* WeiboTimelineFetcher.h */,
-				6198143E24B823E300443CBE /* WeiboTimelineFetcher.m */,
-				6198144024B8450F00443CBE /* StatusViewCell.h */,
-				6198144124B8450F00443CBE /* StatusViewCell.m */,
+				6198144424B86D6900443CBE /* Controller */,
+				6198144524B86D7300443CBE /* Utils */,
+				6198144324B86D4A00443CBE /* View */,
 			);
 			path = HomeWork2;
 			sourceTree = "<group>";
@@ -150,6 +147,33 @@
 				6198143824B8101200443CBE /* WeiboModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		6198144324B86D4A00443CBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6198144024B8450F00443CBE /* StatusViewCell.h */,
+				6198144124B8450F00443CBE /* StatusViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6198144424B86D6900443CBE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6198143A24B820E300443CBE /* FakeWeiboViewController.h */,
+				6198143B24B820E300443CBE /* FakeWeiboViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6198144524B86D7300443CBE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6198143D24B823E300443CBE /* WeiboTimelineFetcher.h */,
+				6198143E24B823E300443CBE /* WeiboTimelineFetcher.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		D78DC3143AB31B47EB33C1E1 /* Pods */ = {
