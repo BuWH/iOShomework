@@ -7,6 +7,7 @@
 //
 
 #import "WeiboModel.h"
+#import <Mantle/Mantle.h>
 
 @implementation WeiboModel
 
