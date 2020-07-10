@@ -8,7 +8,7 @@
 
 #import "WeiboTimelineFetcher.h"
 
-#define ACCESS_TOKEN @"2.00WbHZhGgkz2cC9a7e7ab8f1kDzrdD"
+#define ACCESS_TOKEN @"2.00WbHZhGzmBiFC01dc4190ee6zBPJD"
 
 @implementation WeiboTimelineFetcher
 

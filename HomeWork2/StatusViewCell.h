@@ -1,5 +1,5 @@
 //
-//  FakeWeiboViewController.h
+//  StatusViewCell.h
 //  HomeWork2
 //
 //  Created by 温和 on 2020/7/10.
@@ -7,15 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Masonry/Masonry.h>
 #import "WeiboModel.h"
-#import <YTKNetwork/YTKNetwork.h>
-#import "WeiboTimelineFetcher.h"
-#import "StatusViewCell.h"
-
+#import <SDWebImage/SDWebImage.h>
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FakeWeiboViewController : UITableViewController
-    
+@interface StatusViewCell : UITableViewCell
+@property (nonatomic, strong) WeiboStatus *model;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -9,7 +9,7 @@
 #import "FakeWeiboViewController.h"
 
 
-@interface FakeWeiboViewController ()
+@interface FakeWeiboViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) WeiboTimeline *model;
 @property (nonatomic, strong) UITableView *tableView;
 @end
@@ -19,20 +19,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self fetchTimeline];
-    
-    self.tableView = [UITableView new];
+    self.model = [WeiboTimeline new];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+    self.view = self.tableView;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
+    [self fetchTimeline];
 }
 
 - (void)fetchTimeline {
     WeiboTimelineFetcher *fetcher = [WeiboTimelineFetcher new];
     [fetcher startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
         NSLog(@"fetch success");
-        WeiboTimeline *responseModel = [MTLJSONAdapter modelOfClass:WeiboTimeline.class fromJSONDictionary:request.responseObject error:nil];
+        self.model = [MTLJSONAdapter modelOfClass:WeiboTimeline.class fromJSONDictionary:request.responseObject error:nil];
         //NSLog(@"%@\n", request.responseObject);
+        [self.tableView reloadData];
     } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
         NSLog(@"fetch fail");
         NSLog(@"%@", request.description);
@@ -40,7 +43,7 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -48,9 +51,13 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    static NSString * const ID = @"cell";
+    StatusViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    if (!cell) {
+        cell = [[StatusViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+    }
+    cell.model = self.model.statuses[indexPath.row];
     
     return cell;
 }
